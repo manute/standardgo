@@ -1,7 +1,7 @@
 package db_test
 
 import (
-	"mytests/api/db"
+	"mytests/standardgo/db"
 	"testing"
 )
 

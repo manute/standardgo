@@ -1,9 +1,9 @@
 package repository_test
 
 import (
-	"mytests/api/db"
-	"mytests/api/repository"
-	. "mytests/api/tester"
+	"standardgo/db"
+	"standardgo/repository"
+	. "standardgo/tester"
 	"testing"
 )
 

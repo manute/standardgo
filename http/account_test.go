@@ -1,10 +1,10 @@
 package http_test
 
 import (
-	"mytests/api/domain"
-	myhttp "mytests/api/http"
-	"mytests/api/tester"
 	"net/http"
+	"standardgo/domain"
+	myhttp "standardgo/http"
+	"standardgo/tester"
 	"testing"
 )
 

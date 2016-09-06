@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"mytests/api/db"
-	"mytests/api/domain"
+	"standardgo/db"
+	"standardgo/domain"
 )
 
 type AccountRepository struct {

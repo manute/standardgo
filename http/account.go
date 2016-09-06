@@ -1,7 +1,7 @@
 package http
 
 import (
-	"mytests/api/domain"
+	"standardgo/domain"
 
 	"github.com/kataras/iris"
 )

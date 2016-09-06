@@ -1,9 +1,9 @@
 package main
 
 import (
-	"mytests/api/db"
-	"mytests/api/http"
-	"mytests/api/repository"
+	"standardgo/db"
+	"standardgo/http"
+	"standardgo/repository"
 
 	"github.com/iris-contrib/logger"
 	mLogger "github.com/iris-contrib/middleware/logger"
