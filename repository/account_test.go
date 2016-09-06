@@ -3,7 +3,7 @@ package repository_test
 import (
 	"mytests/api/db"
 	"mytests/api/repository"
-	. "mytests/api/test"
+	. "mytests/api/tester"
 	"testing"
 )
 
