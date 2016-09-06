@@ -6,7 +6,7 @@ import (
 )
 
 type AccountRepository struct {
-	Db *db.DB
+	Db *db.PostgreDB
 }
 
 func (ar *AccountRepository) Find() ([]*domain.Account, error) {

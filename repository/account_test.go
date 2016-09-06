@@ -10,7 +10,7 @@ import (
 var accountRepo *repository.AccountRepository
 
 func TestMain(m *testing.M) {
-	db, err := db.NewPSQL()
+	db, err := db.NewPostgreDB()
 	if err != nil {
 		panic(err)
 	}

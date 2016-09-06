@@ -1,12 +1,12 @@
 package db_test
 
 import (
-	"mytests/standardgo/db"
+	"standardgo/db"
 	"testing"
 )
 
 func TestPing(t *testing.T) {
-	db, err := db.NewPSQL()
+	db, err := db.NewPostgreDB()
 	if err != nil {
 		t.Error(err)
 	}

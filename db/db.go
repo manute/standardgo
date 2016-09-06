@@ -5,15 +5,15 @@ import (
 	_ "github.com/lib/pq"
 )
 
-type DB struct {
+type PostgreDB struct {
 	*sqlx.DB
 }
 
-func NewPSQL() (*DB, error) {
+func NewPostgreDB() (*PostgreDB, error) {
 	db, err := sqlx.Connect("postgres", "user=postgres password='postgres' dbname=postgres")
 	if err != nil {
 		return nil, err
 	}
 
-	return &DB{db}, nil
+	return &PostgreDB{db}, nil
 }

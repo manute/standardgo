@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	db, err := db.NewPSQL()
+	db, err := db.NewPostgreDB()
 	if err != nil {
 		panic(err)
 	}
