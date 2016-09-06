@@ -3,6 +3,7 @@ package main
 import (
 	"mytests/api/db"
 	"mytests/api/http"
+	"mytests/api/repository"
 
 	"github.com/iris-contrib/logger"
 	mLogger "github.com/iris-contrib/middleware/logger"
@@ -16,13 +17,13 @@ func main() {
 	}
 	defer db.Close()
 
-	accountRestService := http.NewAccountRestService(db)
+	accountRestService := http.NewAccountRestService(&repository.AccountRepository{db})
 
 	theLogger := logger.New(logger.DefaultConfig())
 
 	iris.Use(mLogger.New(theLogger))
 
-	iris.Get("/accounts", accountRestService.GetAll)
+	iris.Get("/accounts", accountRestService.List)
 
 	iris.Listen(":8080")
 }

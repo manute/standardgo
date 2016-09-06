@@ -5,5 +5,5 @@ type Account struct {
 }
 
 type AccountService interface {
-	Find() ([]Account, error)
+	Find() ([]*Account, error)
 }

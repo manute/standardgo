@@ -1,24 +1,24 @@
 package http
 
 import (
-	"mytests/api/db"
 	"mytests/api/domain"
-	"mytests/api/repository"
 
 	"github.com/kataras/iris"
 )
 
-type AccountRestService struct {
+type AccountRestService interface {
+	List(c *iris.Context)
+}
+
+type accountService struct {
 	DomainService domain.AccountService
 }
 
-func NewAccountRestService(db *db.DB) *AccountRestService {
-	return &AccountRestService{
-		&repository.AccountRepository{Db: db},
-	}
+func NewAccountRestService(repo domain.AccountService) AccountRestService {
+	return &accountService{repo}
 }
 
-func (a *AccountRestService) GetAll(c *iris.Context) {
+func (a *accountService) List(c *iris.Context) {
 	res, err := a.DomainService.Find()
 	if err != nil {
 		c.JSON(iris.StatusOK, err)

@@ -6,7 +6,6 @@ import (
 )
 
 type DB struct {
-	// *sql.DB
 	*sqlx.DB
 }
 

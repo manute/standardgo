@@ -18,8 +18,8 @@ func TestMain(m *testing.M) {
 
 	accountRepo = &repository.AccountRepository{Db: db}
 	m.Run()
-
 }
+
 func TestAccountFind(t *testing.T) {
 	accs, err := accountRepo.Find()
 	Ok(t, err)
